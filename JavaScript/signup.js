@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/sendotp", {
+            const response = await fetch("https://trendora-backend-1.onrender.com/sendotp", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ fname, lname, email, password }),
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/verifyotp", {
+            const response = await fetch("https://trendora-backend-1.onrender.com/verifyotp", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, otp }),
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/signup", {
+            const response = await fetch("https://trendora-backend-1.onrender.com/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ fname, lname, email, password }),
