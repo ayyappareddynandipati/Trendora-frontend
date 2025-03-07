@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reset your password at Trendora FashionStyle.">
+    <meta name="keywords" content="forgot password, reset password, Trendora FashionStyle">
+    <meta name="author" content="Trendora_FashionStyle">
+    <link rel="icon" href="images/logowhite.jpg" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="Style/forgot.css">
+    <link rel="stylesheet" href="Style/main.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <title>Forgot Password - Trendora FashionStyle</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginBtn = document.getElementById("login_btn");
+            const displayLogin = document.getElementById("display_login");
+        
+            // Check if user is logged in
+            let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        
+            if (loggedInUser) {
+                displayLogin.style.display = "block"; // Show "Sign Out"
+                loginBtn.style.display = "none"; // Hide "Login" button
+            } else {
+                displayLogin.style.display = "none"; // Hide "Sign Out"
+                loginBtn.style.display = "block"; // Show "Login" button
+            }
+        });
+        
+        // Logout function
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            alert("You have been logged out!");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+        </script>  
+<header class="container" id="header">
+    <div class="header_top">
+        <!-- Logo -->
+        <div class="logo_container">
+            <img src="images/logo_block.jpg" alt="Page Logo" id="logo">
+        </div>
+
+        <!-- Navigation Bar - Centered -->
+        <nav id="navbar">
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Actions (Login, Cart, Logout) -->
+        <div class="header_actions">
+            <!-- <a href="login.html" title="Login" id="login_btn">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a>
+            <a href="#" class="icon-cart">
+                <ion-icon name="cart-outline"></ion-icon>
+                <span id="cart-counter">0</span>
+            </a>
+            <div id="display_login">
+                <a href="#" id="logout" onclick="logout();">
+                    <span id="signout">Sign Out</span>
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </a>
+            </div> -->
+        </div>
+    </div>
+</header>
+
+<section id="forgot-password">
+    <div class="container">
+        <h1 class="section-header">Forgot Password</h1>
+        <p class="description">Enter your email and set a new password.</p>
+
+        <div id="form">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" placeholder="Enter new password">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm new password">
+
+            <p class="alert" id="alert-message"></p>
+
+            <button id="btn-reset">Reset Password</button>
+
+            <div class="submit">
+                <a href="login.html">Back to Login</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer black-footer">
+    <div class="footer-bottom">
+        <p class="footer-company-name">
+            © 2024 All rights reserved. Made with <ion-icon name="heart"></ion-icon> by Ayyappa Reddy
+        </p>
+    </div>
+</footer>
+
+<script src="JavaScript/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" type="image/jpg" href="./images/news2.png"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+    </style>
+    <link rel="stylesheet" href="Style/contact.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="contactInfo"> 
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="./images/location.png" alt="Location"></span>
+                            <span>Piduguralla<br>
+                                Guntur<br>
+                                522413
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="./images/mail.png" alt="Mail"></span>
+                            <span><a href="mailto:trendora@gmail.com">trendora@gmail.com</a></span>
+                        </li>
+                        <li>
+                            <span><img src="./images/call.png" alt="Call"></span>
+                            <span><a href="tel:+917672053063">+91 7672053063</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/trendora/"><img src="./images/1.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/trendora"><img src="./images/3.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/in/trendora/"><img src="./images/5.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="4ca8d91f-e98b-400a-9b6d-64a28ee6790f">
+
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="first_name" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="last_name" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" name="email" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="mobile_number" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="message" required></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

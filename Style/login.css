@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Forgot Password & Login Sections */
+#forgot-password, #login {
+    min-height: calc(100vh - 150px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+#forgot-password .container, #login .container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Section Header */
+.section-header {
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Form Styling */
+#form {
+    margin-top: 20px;
+}
+
+#form label {
+    margin-bottom: 8px;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Input Fields */
+#form input {
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    border: 1px solid rgba(17, 17, 17, 0.55);
+    border-radius: 44px;
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.9);
+    background: rgba(255, 255, 255, 1);
+    margin-bottom: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+#form input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(17, 17, 17, 0.9);
+}
+
+/* OTP Input Styling */
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.otp-box {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+}
+
+.otp-box:focus {
+    border-color: #444;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Submit Section */
+#form .submit {
+    margin: 24px 0;
+    text-align: center;
+}
+
+#form .submit button {
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #000, #444);
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 35px;
+    border-radius: 44px;
+    margin: 15px 0 10px;
+    border: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#form .submit button:hover {
+    background: linear-gradient(90deg, #444, #000);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+#form .submit a {
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px !important;
+    color: #000;
+}
+
+#form .submit a:hover {
+    color: #444;
+}
+
+/* Alert Message */
+.alert {
+    display: none;
+    color: red;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    #forgot-password, #login {
+        padding: 30px 15px;
+    }
+
+    #forgot-password .container, #login .container {
+        padding: 20px;
+    }
+
+    .section-header {
+        font-size: 28px;
+    }
+
+    .otp-box {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        
+    }
+    
+    #form input {
+        height: 45px;
+    }
+
+    #form .submit button {
+        padding: 12px 25px;
+    }
+}

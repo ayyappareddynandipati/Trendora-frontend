@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover the latest trends in fashion for 
+        women and men at Trendora FashionStyle. Shop our wide selection of clothes, bags,
+        jewelry, and more. Elevate your style with our curated collections.">
+        <meta name="keywords" content="clothes, women, men, fashion, bags, jewelry, Trendora FashionStyle, latest trends, stylish clothing, accessories">
+        <meta name="author" content="Trendora_FashionStyle">
+        <link rel="icon" href="images/logowhite.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="Style/main.css">
+        <link rel="stylesheet" href="Style/login.css">
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- icon -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <title>Trendora</title>
+    </head>
+<body>
+    <script src="JavaScript/signup.js"></script>
+    <script>
+       
+        
+    
+     
+            const loginBtn = document.getElementById("login_btn");
+            const displayLogin = document.getElementById("display_login");
+        
+            // Check if user is logged in
+            let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        
+            if (loggedInUser) {
+                displayLogin.style.display = "block"; // Show "Sign Out"
+                loginBtn.style.display = "none"; // Hide "Login" button
+            } else {
+                displayLogin.style.display = "none"; // Hide "Sign Out"
+                loginBtn.style.display = "block"; // Show "Login" button
+            }
+        
+        
+        // Logout function
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            alert("You have been logged out!");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+        </script>
+        </script>  
+<header class="container" id="header">
+    <div class="header_top">
+        <!-- Logo -->
+        <div class="logo_container">
+            <img src="images/logo_block.jpg" alt="Page Logo" id="logo">
+        </div>
+
+        <!-- Navigation Bar - Centered -->
+        <nav id="navbar">
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- User Actions (Login, Cart, Logout) -->
+        <div class="header_actions">
+            <a href="login.html" title="Login" id="login_btn">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a>
+            <a href="#" class="icon-cart">
+                <ion-icon name="cart-outline"></ion-icon>
+                <span id="cart-counter">0</span>
+            </a>
+            <div id="display_login">
+                <a href="#" id="logout" onclick="logout();">
+                    <span id="signout">Sign Out</span>
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="login">
+    <div class="container">
+        <h1 class="section-header">Create Account</h1>
+        <div id="form">
+            <input type="text" id="fname" placeholder="First Name">
+            <input type="text" id="lname" placeholder="Last Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="send-otp" style="padding: 3px 4px; background-color: rgb(146, 219, 36); color: white; border-radius: 20px;">Send OTP</button>
+            
+            <!-- OTP Input Fields -->
+            <div id="otp-section" style="display: none;">
+                <p>Enter OTP sent to your email:</p>
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-box">
+                    <input type="text" maxlength="1" class="otp-box">
+                    <input type="text" maxlength="1" class="otp-box">
+                    <input type="text" maxlength="1" class="otp-box">
+                </div>
+                <button id="verify-otp" style="padding: 3px 4px; background-color: rgb(146, 219, 36); color: white; border-radius: 20px;">Verify OTP</button>
+            </div>
+            
+            <div class="submit">
+                 <button id="btn-signup">Create</button>
+                <a href="index.html">Return to store</a>
+            </div>  
+        </div>
+    </div>
+</section>
+    <footer class="footer login-footer">
+        <div class="footer-top">
+           <div class="footer-logo">
+               <img src="images/logo_block.jpg" alt="logo" width="140">
+               <p>The customer is at the heart of our unique business model, which includes design.</p>
+           </div>
+           <div class="footer-list">
+               <div class="list">
+                   <h4>SHOPPING</h4>
+                   <ul>
+                       <li><a href="#">Clothing Store</a></li>
+                       <li><a href="#">Trending Shoes</a></li>
+                       <li><a href="#">Accessories</a></li>
+                       <li><a href="#">Sale</a></li>
+                   </ul>
+               </div>
+               <div class="list">
+                   <h4>Customer Services</h4>
+                   <ul>
+                       <li><a href="#">Contact Us</a></li>
+                       <li><a href="#">Payment Methods</a></li>
+                       <li><a href="#">Delivary</a></li>
+                       <li><a href="#">Return & Exchanges</a></li>
+                   </ul>
+               </div>
+   
+           </div>
+        </div>
+       <div class="footer-bottom">
+           <p class="footer-company-name">
+               © 2024 All right reserved.Made with <ion-icon name="heart"></ion-icon>
+                by Ayyappa Reddy
+           </p>
+       </div>
+   </footer>
+   <script>
+    document.getElementById("send-otp").addEventListener("click", function() {
+        const email = document.getElementById("email").value;
+        if (email) {
+            localStorage.setItem("userEmail", email); // Store email temporarily
+            document.getElementById("otp-section").style.display = "block"; // Show OTP fields
+        } else {
+            alert("Please enter your email to receive an OTP.");
+        }
+    });
+</script>
+
+</body>
+</html>
